@@ -77,7 +77,7 @@ Place all project files in your server’s root or subfolder (e.g., `/var/www/ht
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/special-friend-website.git
+    git clone https://github.com/nouzen-shinei/friendship.git
     ```
 2. Follow setup steps above.
 3. Open `index.html` in your browser (via localhost or domain).
