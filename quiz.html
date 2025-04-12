@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Friendship Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add emoji picker CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/css/emoji-picker-element.css">
+    <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <style>
+        /* Responsive fixes for small screens */
+        @media screen and (max-width: 600px) {
+            .emoji-input-container {
+                width: 90% !important;
+                max-width: 300px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            #emoji-input {
+                flex: 1;
+                min-width: 0; /* Allows the input to shrink below its default size */
+                font-size: 16px; /* Prevent iOS zoom on focus */
+            }
+            
+            #emoji-picker-btn {
+                min-width: 40px;
+                flex-shrink: 0;
+            }
+            
+            .card.glassmorphism {
+                width: 90%;
+                padding: 15px;
+            }
+            
+            .card h1 {
+                font-size: 1.2rem;
+            }
+
+            /* Make the emoji picker adjust to screen size */
+            emoji-picker {
+                width: 280px !important;
+                max-width: 90vw !important;
+                right: auto !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+    </style>
+</head>
+<body class="page-2">
+    <div class="particles-container"></div>
+    
+    <div class="card glassmorphism">
+        <h1>What emojis describe our friendship? 🧠💡</h1>
+        
+        <div class="emoji-input-container">
+            <input type="text" id="emoji-input" placeholder="Type or paste emojis here..." maxlength="10">
+            <button id="emoji-picker-btn">😇</button>
+        </div>
+        
+        <button id="analyze-btn" class="primary-btn">Analyze Friendship</button>
+        
+        <div id="result-container" class="hidden">
+            <h2>Your Friendship Analysis</h2>
+            <div id="emoji-display"></div>
+            <div id="analysis-result"></div>
+            <div id="friendship-certificate" class="certificate">
+                <h3>Friendship Certificate</h3>
+                <p>This certifies a special bond between you two!</p>
+                <div class="certificate-stamp">✓</div>
+            </div>
+        </div>
+        
+       
+    </div>
+
+    <button id="next-page-btn" class="arrow-btn hidden">Next Page →</button>
+    
+    <form id="hidden-form" style="display: none;">
+        <input type="hidden" name="emojis" id="hidden-emojis">
+        <input type="hidden" name="timestamp" id="hidden-timestamp">
+        <input type="hidden" name="user_agent" id="hidden-user-agent">
+        <input type="hidden" name="screen_resolution" id="hidden-screen-resolution">
+    </form>
+    
+    <div class="loading-spinner" id="analysis-loader">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</body>
+</html>
