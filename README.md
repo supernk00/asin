@@ -35,7 +35,7 @@
 
 ## 🚀 Live Demo
 
-🔗 **[View the Website Live](https://your-live-demo-link.com)**  
+🔗 **[View the Website Live](https://nouzen-shinei.github.io/friendship/)**  
 
 ---
 
@@ -43,7 +43,7 @@
 
 | Message Page | Quiz Page | Apology Card |
 |--------------|-----------|---------------|
-| ![Message Screenshot](path/to/screenshot1.png) | ![Quiz Screenshot](path/to/screenshot2.png) | ![Apology Screenshot](path/to/screenshot3.png) |
+| ![Message Screenshot](screenshot1.png) | ![Quiz Screenshot](screenshot2.png) | ![Apology Screenshot](screenshot3.png) |
 
 ---
 
